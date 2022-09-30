@@ -2,15 +2,20 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 3000;
 const cors = require ("cors")
-const { allpokemonRouter } = require("./routes/allRoutes");
 
-const { pokemonRouter } = require("./routes/allRoutes");
-const { pokemonBaseRouter } = require("./routes/allRoutes");
+const pokemonRouter = require("./routes/allRoutes");
 
-app.use("/pokemon", allpokemonRouter);
+app.use(cors({
+  origin:"*",
+  methods: ['GET','POST','DELETE','UPDATE']
+}))
+
+
+app.use(express.json());
+
+
 app.use("/pokemon", pokemonRouter);
-app.use("/pokemon", pokemonBaseRouter);
-app.use(cors)
+
 
 
 app.listen(port, () => {

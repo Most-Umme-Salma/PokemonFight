@@ -1,20 +1,16 @@
 const express = require("express");
 //==========================================================
-const { allpokemonRouter } = require("../controllers/allpekemon"); 
+const {
+    allPokemon,
+  onePokemon,
+  pokemonBase,
+} = require("../controllers/pokemon");
 //==========================================================
-const { pokemonRouter } = require("../controllers/pokemon"); 
-//==========================================================
-const { pokemonBaseRouter } = require("../controllers/pokemonBase");
-//==========================================================
-pokemonRouter.get("/");
-//=========================================
-pokemonBaseRouter.get("/:id");
-//=========================================
-pokemonRouter.get("/:id/:info");
-//=========================================
+const pokemonRouter = express.Router();
 
-module.exports = {
-    allpokemonRouter,
-    pokemonRouter,
-    pokemonBaseRouter
-};
+pokemonRouter.route("/").get(allPokemon)
+pokemonRouter.route("/:id").get(onePokemon)
+pokemonRouter.route("/:id/info").get(pokemonBase)
+ 
+
+module.exports = pokemonRouter;

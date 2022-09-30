@@ -3,10 +3,6 @@ const pokemonRouter = express.Router();
 
 const jsonData = require("../data.json");
 
-pokemonRouter.get("/", (req, res) => {
-  res.json(jsonData);
-  console.log(jsonData);
-});
 
 pokemonRouter.get("/:id", (req, res, next) => {
   try {
@@ -19,25 +15,9 @@ pokemonRouter.get("/:id", (req, res, next) => {
   }
 });
 
-pokemonRouter.get("/:id/:info", (req, res, next) => {
-  try {
-    const { id, info } = req.params;
-    if (info !== "base" || info !== "name" || info !== "type")
-      return res.status(400).send("Please review your search");
-    res.status(200).json({ Message: "Nothing to show yet" });
-  } catch (err) {
-    res.status(500).send(err.message);
-  }
-});
+
 
 module.exports = {
   pokemonRouter,
 };
 
-/*
-
-app.use((err, req, res, next) => {
-
-})
-
-*/

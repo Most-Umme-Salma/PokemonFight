@@ -2,32 +2,51 @@
 
 * {
   margin: 0;
-  font-family: "Quicksand";
-  color: #333;
+  font-family: "tahoma";
+  color: rgb(81, 78, 78);
+}
+h1{
+  color: #820d30;
 }
 .header {
+  color:#820d30;
   justify-content: center;
   padding: 10px;
   display: flex;
   align-items: auto;
   max-width: 100%;
   margin: 10px;
-  border: 1px solid #f1356d;
+  border: 1px solid #820d30;
   border-radius: 8px
+}
+.App {
+  color:#820d30;
+  background-color: aqua;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.grid {
+  background-color: aqua;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem;
 }
 
 .content {
+  background-color: aqua;
   max-width: auto;
   margin: 40px auto;
-  padding: 20px;
+  padding: 25px;
 }
 
 .preview {
+  max-width: 100%;
+  margin: 20px;
+  border: 1px solid #820d30;
+  border-radius: 8px;
   text-decoration: none;
-  padding: 10px;
-  margin: 10px 0;
-  border-bottom: 1px solid #fafafa;
 }
 .preview:hover {
-  box-shadow: 1px 3px 5px rgba(255, 114, 38, 0.775);
+  box-shadow: 1px 3px 5px rgba(193, 17, 17, 0.775);
 }

@@ -1,9 +1,11 @@
 import './App.css';
-import Pokemon from "./components/Pokemons"
+import LangDropdown from "./Select"
 function App() {
+  const titel ="ALL POKEMON"
   return (
     <div className="App">
-    <Pokemon/>
+      <h1>{titel}</h1>    
+     <LangDropdown /> 
     </div>
   );
 }

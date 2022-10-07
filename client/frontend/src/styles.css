@@ -32,3 +32,7 @@
 .preview:hover {
   box-shadow: 1px 3px 5px rgba(193, 17, 17, 0.775);
 }
+.pokemonOne{
+  justify-content: center;
+
+}
